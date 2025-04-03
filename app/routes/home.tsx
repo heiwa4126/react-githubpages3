@@ -28,12 +28,8 @@ export default function Home() {
 			<div>
 				<CounterButton /> <CounterButton initialCount={999} />
 			</div>
-			<p>
-				参考:{" "}
-				<a href="https://vitejs.dev/guide/static-deploy.html#github-pages">
-					Deploying a Static Site | Vite
-				</a>
-			</p>
+			<h2>TODO</h2>
+			<p>clientLoader()にする。</p>
 		</>
 	);
 }

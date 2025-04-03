@@ -1,20 +1,39 @@
-import { Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse } from "react-router";
+import {
+	Links,
+	Meta,
+	NavLink,
+	Outlet,
+	Scripts,
+	ScrollRestoration,
+	isRouteErrorResponse,
+} from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
 
-// export const links: Route.LinksFunction = () => [
-// 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
-// 	{
-// 		rel: "preconnect",
-// 		href: "https://fonts.gstatic.com",
-// 		crossOrigin: "anonymous",
-// 	},
-// 	{
-// 		rel: "stylesheet",
-// 		href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-// 	},
-// ];
+export const links: Route.LinksFunction = () => [
+	// { rel: "preconnect", href: "https://fonts.googleapis.com" },
+	// {
+	// 	rel: "preconnect",
+	// 	href: "https://fonts.gstatic.com",
+	// 	crossOrigin: "anonymous",
+	// },
+	// {
+	// 	rel: "stylesheet",
+	// 	href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+	// },
+];
+
+function Navbar() {
+	return (
+		<nav>
+			<NavLink to="">Home</NavLink>
+			<NavLink to="page1">Page 1</NavLink>
+			<NavLink to="page2">Page 2</NavLink>
+			<NavLink to="notexists">存在しないページ</NavLink>
+		</nav>
+	);
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	return (
@@ -23,9 +42,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Meta />
-				{/* <Links /> */}
+				<Links />
 			</head>
 			<body className="prose max-w-none p-4">
+				<Navbar />
 				{children}
 				<ScrollRestoration />
 				<Scripts />
