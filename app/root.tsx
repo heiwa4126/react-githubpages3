@@ -37,7 +37,6 @@ function Navbar() {
 			<NavLink to="page1">Page 1</NavLink>
 			<NavLink to="page2">Page 2</NavLink>
 			<NavLink to="products">製品一覧</NavLink>
-			<NavLink to="products/aaa">製品AAA</NavLink>
 		</nav>
 	);
 }
