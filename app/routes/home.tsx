@@ -2,7 +2,6 @@ import { useState } from "react";
 import type { Route } from "./+types/home";
 
 export function meta({ location }: Route.MetaArgs) {
-	console.log({ location });
 	return [
 		{ title: "GitHub Pages 3" },
 		{
