@@ -25,12 +25,10 @@ export default function Home() {
 		<>
 			<h1>GitHub Pages 3</h1>
 			<p>SemVer 式の tag つけて push するごとに GitHub Pages としてデプロイするサンプル。</p>
-			<p>React Router v7 の </p>
+			<p>React Router v7 の フレームワークモードで prerenderされてるよ。</p>
 			<div>
 				<CounterButton /> <CounterButton initialCount={999} />
 			</div>
-			<h2>TODO</h2>
-			<p>clientLoader()にする。</p>
 		</>
 	);
 }
