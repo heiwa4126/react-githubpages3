@@ -1,12 +1,13 @@
 import { useState } from "react";
 import type { Route } from "./+types/home";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ location }: Route.MetaArgs) {
+	console.log({ location });
 	return [
 		{ title: "GitHub Pages 3" },
 		{
 			name: "description",
-			content: "SemVer 式の tag つけて push するごとに GitHub Pages としてデプロイするサンプル。",
+			content: "SemVer 式の tag つけて push するごとに GitHub Pages としてデプロイするサンプル",
 		},
 	];
 }
@@ -25,6 +26,7 @@ export default function Home() {
 		<>
 			<h1>GitHub Pages 3</h1>
 			<p>SemVer 式の tag つけて push するごとに GitHub Pages としてデプロイするサンプル。</p>
+			<p>React Router v7 の </p>
 			<div>
 				<CounterButton /> <CounterButton initialCount={999} />
 			</div>

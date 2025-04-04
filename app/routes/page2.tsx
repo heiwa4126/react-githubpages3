@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -14,7 +15,12 @@ export default function Page() {
 	return (
 		<>
 			<h1>Page 2</h1>
-			<p>ここは、とあるページ2だよ。嘘いつわりないよ。 遅延ロードはまだやりかたがわからないよ。</p>
+			<p>ここは、とあるページ2だよ。</p>
+			<p>
+				このページはわざと prerender() してないよ。
+				ここでリロードしたり、このurlでアクセスしようとするとエラーになるよ。 (buildしてから{" "}
+				<Link to="/page1">page 1</Link> と比較してね)
+			</p>
 		</>
 	);
 }

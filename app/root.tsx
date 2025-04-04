@@ -11,6 +11,12 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+export function HydrateFallback() {
+	return <p>Loading, please wait...</p>;
+}
+
+export async function clientLoader() {}
+
 export const links: Route.LinksFunction = () => [
 	// { rel: "preconnect", href: "https://fonts.googleapis.com" },
 	// {
