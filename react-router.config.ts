@@ -9,6 +9,7 @@ export default {
 	// Config options...
 	// Server-side render by default, to enable SPA mode set this to `false`
 	ssr: false,
+	basename: "/client/",
 	async prerender() {
 		const productPages = productsKeys.map((key) => `/products/${key}`);
 		return ["/", "/page1", "/products", ...productPages];
