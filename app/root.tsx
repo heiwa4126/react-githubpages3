@@ -41,12 +41,27 @@ function Navbar() {
 	);
 }
 
+function ImportMap() {
+	const s = String.raw`
+			{
+			"imports": {
+				"react": "https://esm.sh/react@19",
+				"react-dom/client": "https://esm.sh/react-dom@19/client"
+			}
+		}
+	`;
+
+	// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+	return <script type="importmap" dangerouslySetInnerHTML={{ __html: s }} />;
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="ja">
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				{process.env.NODE_ENV === "production" && ImportMap()}
 				<Meta />
 				<Links />
 			</head>
