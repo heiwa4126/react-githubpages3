@@ -42,17 +42,18 @@ function Navbar() {
 }
 
 function ImportMap() {
-	const s = String.raw`
-			{
-			"imports": {
-				"react": "https://esm.sh/react@19",
-				"react-dom/client": "https://esm.sh/react-dom@19/client"
-			}
-		}
-	`;
+	const map = {
+		react: "https://esm.sh/react@19",
+		"react-dom/client": "https://esm.sh/react-dom@19/client",
+	};
 
-	// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
-	return <script type="importmap" dangerouslySetInnerHTML={{ __html: s }} />;
+	return (
+		<script
+			type="importmap"
+			// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+			dangerouslySetInnerHTML={{ __html: JSON.stringify({ imports: map }) }}
+		/>
+	);
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
