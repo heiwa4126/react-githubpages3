@@ -7,6 +7,7 @@ const productsKeys = Object.keys(products as Products) as Array<keyof Products>;
 
 export default {
 	// Config options...
+	basename: process.env.GITHUB_REPO_NAME ?? "/",
 	// Server-side render by default, to enable SPA mode set this to `false`
 	ssr: false,
 	async prerender() {
