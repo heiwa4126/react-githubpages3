@@ -7,6 +7,7 @@
 		"dev": "react-router dev",
 		"start": "react-router-serve ./build/server/index.js",
 		"preview": "pnpx http-server -c 1 -p 4173 ./build/client",
+		"preview2": "pnpx http-server -c 1 -p 4173 ./build",
 		"typecheck": "react-router typegen && tsc",
 		"format": "biome format --write . && dprint fmt  && textlint --fix \"**/*.md\""
 	},
