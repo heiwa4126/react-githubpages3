@@ -88,7 +88,7 @@ jobs:
         with:
           # Upload repository
           # path: "./dist"
-          path: "./build/client/$GITHUB_REPO_NAME"
+          path: "./build/client/${{ env.GITHUB_REPO_NAME }}"
 
       - name: Deploy to GitHub Pages
         id: deployment
