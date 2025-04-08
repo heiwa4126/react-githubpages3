@@ -4,11 +4,16 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-	base: process.env.GITHUB_REPO_NAME ?? "/",
+	// base: process.env.GITHUB_REPO_NAME ?? "/",
+	// base: "/client/",
 	plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 	build: {
 		rollupOptions: {
-			external: ["react", "react-dom/client"],
+			external: [
+				"react",
+				"react-dom/client",
+				// "react-router"
+			],
 		},
 	},
 	// esbuild: {

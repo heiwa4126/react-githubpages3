@@ -45,6 +45,7 @@ function ImportMap() {
 	const map = {
 		react: "https://esm.sh/react@19",
 		"react-dom/client": "https://esm.sh/react-dom@19/client",
+		// "react-router": "https://esm.sh/react-router@7",
 	};
 
 	return (
@@ -60,6 +61,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="ja">
 			<head>
+				{/* {process.env.GITHUB_REPO_NAME && <base href="/client/" />} */}
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				{process.env.NODE_ENV === "production" && ImportMap()}

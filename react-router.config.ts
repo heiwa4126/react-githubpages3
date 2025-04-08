@@ -12,7 +12,7 @@ if (!basename.startsWith("/")) {
 
 export default {
 	// Config options...
-	// basename,
+	// basename: "/client/",
 	// Server-side render by default, to enable SPA mode set this to `false`
 	ssr: false,
 	async prerender() {
