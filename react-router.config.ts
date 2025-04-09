@@ -5,10 +5,10 @@ import type { Products } from "app/routes/products/types";
 
 const productsKeys = Object.keys(products as Products) as Array<keyof Products>;
 
-let basename = process.env.GITHUB_REPO_NAME ?? "/";
-if (!basename.startsWith("/")) {
-	basename = `/${basename}`;
-}
+// let basename = process.env.GITHUB_REPO_NAME ?? "/";
+// if (!basename.startsWith("/")) {
+// 	basename = `/${basename}`;
+// }
 
 export default {
 	// Config options...
