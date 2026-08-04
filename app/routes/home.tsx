@@ -6,8 +6,8 @@ export function meta({ location }: Route.MetaArgs) {
 		{ title: "GitHub Pages 3" },
 		{
 			name: "description",
-			content: "SemVer 式の tag つけて push するごとに GitHub Pages としてデプロイするサンプル",
-		},
+			content: "SemVer 式の tag つけて push するごとに GitHub Pages としてデプロイするサンプル"
+		}
 	];
 }
 

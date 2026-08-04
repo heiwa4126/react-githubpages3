@@ -18,5 +18,5 @@ export default {
 	async prerender() {
 		const productPages = productsKeys.map((key) => `/products/${key}`);
 		return ["/", "/page1", "/products", ...productPages];
-	},
+	}
 } satisfies Config;

@@ -7,7 +7,7 @@ export default defineConfig({
 	// base: "/client/",
 	plugins: [tailwindcss(), reactRouter()],
 	resolve: {
-		tsconfigPaths: true,
+		tsconfigPaths: true
 	},
 	build: {
 		minify: true,
@@ -17,12 +17,12 @@ export default defineConfig({
 				minify: {
 					compress: {
 						dropConsole: true,
-						dropDebugger: true,
-					},
-				},
-			},
-		},
-	},
+						dropDebugger: true
+					}
+				}
+			}
+		}
+	}
 	// esbuild: {
 	// 	drop: ["console", "debugger"], // https://esbuild.github.io/api/#drop
 	// },

@@ -8,8 +8,8 @@ export function meta({}: Route.MetaArgs) {
 		{ title: "製品一覧 - GitHub Pages 3" },
 		{
 			name: "description",
-			content: "製品一覧のページ",
-		},
+			content: "製品一覧のページ"
+		}
 	];
 }
 

@@ -6,8 +6,8 @@ export function meta({ _ }: Route.MetaArgs) {
 		{ title: "Page 2 - GitHub Pages 3" },
 		{
 			name: "description",
-			content: "とあるページ2だよ",
-		},
+			content: "とあるページ2だよ"
+		}
 	];
 }
 

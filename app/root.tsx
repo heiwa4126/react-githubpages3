@@ -5,7 +5,7 @@ import {
 	Outlet,
 	Scripts,
 	ScrollRestoration,
-	isRouteErrorResponse,
+	isRouteErrorResponse
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -44,7 +44,7 @@ function Navbar() {
 function ImportMap() {
 	const map = {
 		react: "https://esm.sh/react@19",
-		"react-dom/client": "https://esm.sh/react-dom@19/client",
+		"react-dom/client": "https://esm.sh/react-dom@19/client"
 		// "react-router": "https://esm.sh/react-router@7",
 	};
 

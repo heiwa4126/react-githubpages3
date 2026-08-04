@@ -10,8 +10,8 @@ export function meta({ params }: Route.MetaArgs) {
 		{ title: `製品 ${product.name} - GitHub Pages 3` },
 		{
 			name: "description",
-			content: `${product.name}という製品のページ`,
-		},
+			content: `${product.name}という製品のページ`
+		}
 	];
 }
 
